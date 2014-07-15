@@ -3,7 +3,8 @@
 	"description": "Facebook clone written with Laravel.",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"laracasts/commander": "~1.0"
+		"laracasts/commander": "~1.0",
+		"divsmith/illuminate-decouplr": "~4.2.0"
 	},
 	"require-dev": {
 		"way/generators": "~2.0",
