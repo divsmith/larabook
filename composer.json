@@ -1,8 +1,6 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
+	"name": "divsmith/larabook",
+	"description": "Facebook clone written with Laravel.",
 	"require": {
 		"laravel/framework": "4.2.*"
 	},
