@@ -123,7 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
-        'IlluminateDecouplr\IlluminateDecouplrServiceProvider'
+        'Divsmith\IlluminateDecouplr\IlluminateDecouplrServiceProvider'
 	),
 
 	/*
