@@ -3,7 +3,7 @@
 class RegistrationController extends \BaseController {
 
 	/**
-     * Show a form ro register the user
+     * Show a form to register the user
 	 *
 	 * @return Response
 	 */
