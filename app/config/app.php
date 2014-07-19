@@ -63,7 +63,7 @@ return array(
 	| is not available. You may change the value to correspond to any of
 	| the language folders that are provided through your application.
 	|
-	*/
+	*/ 
 
 	'fallback_locale' => 'en',
 
@@ -78,7 +78,7 @@ return array(
 	|
 	*/
 
-	'key' => 'YourSecretKey!!!',
+	'key' => 'H3Qmg0ylNZUFMXJ3LnP8lnDlxJ1PHbpb',
 
 	'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -123,7 +123,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
-        'Divsmith\IlluminateDecouplr\IlluminateDecouplrServiceProvider'
+        'Divsmith\IlluminateDecouplr\IlluminateDecouplrServiceProvider',
+        'Laracasts\Validation\ValidationServiceProvider'
 	),
 
 	/*
