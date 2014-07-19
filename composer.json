@@ -4,7 +4,7 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"laracasts/commander": "~1.0",
-		"divsmith/illuminate-decouplr": "dev-master",
+		"divsmith/illuminate-decouplr": "dev-master@dev",
 		"laracasts/validation": "1.1.*"
 	},
 	"require-dev": {
