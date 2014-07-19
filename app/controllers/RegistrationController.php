@@ -12,4 +12,14 @@ class RegistrationController extends \BaseController {
 		return View::make('registration.create');
 	}
 
+    /**
+     * Create a new Larabook user
+     *
+     * @return string
+     */
+    public function store()
+    {
+        return Redirect::home();
+    }
+
 }
