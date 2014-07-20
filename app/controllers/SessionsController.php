@@ -13,7 +13,7 @@ class SessionsController extends \BaseController {
     {
         $this->signInForm = $signInForm;
 
-        $this->beforeFilter('guest');
+        $this->beforeFilter('guest', ['except' => 'destroy']);
     }
 
 	/**
@@ -44,5 +44,19 @@ class SessionsController extends \BaseController {
             return Redirect::intended('statuses');
         }
 	}
+
+    /**
+     * Log a user out of Larabook.
+     *
+     * @return mixed
+     */
+    public function destroy()
+    {
+        Auth::logout();
+
+        Flash::message('You have now been logged out.');
+
+        return Redirect::home();
+    }
 
 }
