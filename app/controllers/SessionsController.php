@@ -43,6 +43,9 @@ class SessionsController extends \BaseController {
             Flash::message('Welcome back!');
             return Redirect::intended('statuses');
         }
+
+        Flash::error('Incorrect email or password.');
+        return Redirect::back()->withInput();
 	}
 
     /**
