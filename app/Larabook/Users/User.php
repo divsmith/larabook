@@ -2,6 +2,8 @@
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
+use Larabook\Registration\Events\UserRegistered;
+use Laracasts\Commander\Events\EventGenerator;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Eloquent;
@@ -9,7 +11,7 @@ use Hash;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	use UserTrait, RemindableTrait;
+	use UserTrait, RemindableTrait, EventGenerator;
 
     /**
      * Which fields may be mass assigned.
@@ -53,7 +55,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         $user = new static(compact('username', 'email', 'password')) ;
 
-        // raise an event.
+        $user->raise(new UserRegistered($user));
 
         return $user;
     }
