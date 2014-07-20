@@ -3,6 +3,8 @@
 @section('content')
     <h1>Post a Status</h1>
 
+    @include('layouts.partials.errors')
+
     {{ Form::open() }}
         <!-- Status Form Input -->
         <div class="form-group">
