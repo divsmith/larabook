@@ -4,7 +4,7 @@ $I->am('a guest');
 $I->wantTo('sign up for a Larabook account');
 
 $I->amOnPage('/');
-$I->click('Sign Up!');
+$I->click('Sign Up');
 $I->seeCurrentUrlEquals('/register');
 
 $I->fillField('Username:', 'JohnDoe');
