@@ -21,7 +21,7 @@ class Status extends Eloquent {
      */
     public function user()
     {
-        return $this->hasOne('Larabook\Users\User');
+        return $this->belongsTo('Larabook\Users\User');
     }
 
     /**
