@@ -41,5 +41,28 @@ class StatusRepositoryTest extends \Codeception\TestCase\Test
         $this->assertEquals('My status', $statusesForUser[0]->body);
         $this->assertEquals('My status', $statusesForUser[1]->body);
     }
+    
+    /** @test */
+    public function it_saves_a_status_for_a_user()
+    {
+        // Given I have an unsaved status
+        $status = TestDummy::create('Larabook\Statuses\Status', [
+            'user_id' => null,
+            'body' => 'My status'
+        ]);
+
+        // And an existing user
+        $user = TestDummy::create('Larabook\Users\User');
+
+        // When I try to persist this status
+        $this->repo->save($status, $user->id);
+
+        // Then it should be saved
+        // And the status should have the correct user_id
+        $this->tester->seeRecord('statuses', [
+            'body' => 'My status',
+            'user_id' => $user->id
+        ]);
+     }
 
 }
