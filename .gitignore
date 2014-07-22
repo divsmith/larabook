@@ -8,5 +8,6 @@ composer.lock
 Thumbs.db
 .idea/
 /node_modules
+/public/css
 
 tests/_output/*
