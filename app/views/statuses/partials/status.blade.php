@@ -5,7 +5,7 @@
 
     <div class="media-body">
         <h4 class="media-heading">{{ $status->user->username }}</h4>
-        <p>{{ $status->created_at->diffForHumans() }}</p>
+        <p>{{ $status->present()->timeSincePublished() }}</p>
 
         {{ $status->body }}
     </div>
