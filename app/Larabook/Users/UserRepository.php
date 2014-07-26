@@ -21,6 +21,8 @@ class UserRepository {
      */
     public function getPaginated($howMany = 25)
     {
-        return User::simplePaginate($howMany);
+        $users = User::simplePaginate($howMany);
+
+        return View::make('users.index')->withUsers($users);
     }
 } 
