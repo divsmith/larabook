@@ -1,1 +1,1 @@
-<img class="media-object" src="{{ $user->present()->gravatar }}" alt="{{ $user->username }}"/>
+<img class="media-object img-circle avatar" src="{{ $user->present()->gravatar }}" alt="{{ $user->username }}"/>
