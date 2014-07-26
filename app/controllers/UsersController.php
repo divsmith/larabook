@@ -24,7 +24,9 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$this->userRepository->getPaginated();
+		$users = $this->userRepository->getPaginated();
+
+        return View::make('users.index')->withUsers($users);
 	}
 
 }
