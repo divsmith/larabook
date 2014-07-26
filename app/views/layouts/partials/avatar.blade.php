@@ -1,0 +1,1 @@
+<img class="media-object" src="{{ $user->present()->gravatar }}" alt="{{ $user->username }}"/>

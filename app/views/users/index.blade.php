@@ -4,8 +4,9 @@
     <h1>All Users</h1>
 
     @foreach( $users as $user )
-        <li>
+        <div class="col-md-3">
+            @include('layouts.partials.avatar')
             {{ $user->username }}
-        </li>
+        </div>
     @endforeach
 @stop
