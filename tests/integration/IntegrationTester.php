@@ -207,7 +207,7 @@ class IntegrationTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $user_id = $I->haveRecord('users', array('name' => 'Davert'));
+     * $user_id = $I->haveRecord('Users', array('name' => 'Davert'));
      * ?>
      * ```
      *
@@ -227,7 +227,7 @@ class IntegrationTester extends \Codeception\Actor
      * Checks that record exists in database.
      *
      * ``` php
-     * $I->seeRecord('users', array('name' => 'davert'));
+     * $I->seeRecord('Users', array('name' => 'davert'));
      * ```
      *
      * @param $model
@@ -244,7 +244,7 @@ class IntegrationTester extends \Codeception\Actor
      * Checks that record exists in database.
      *
      * ``` php
-     * $I->seeRecord('users', array('name' => 'davert'));
+     * $I->seeRecord('Users', array('name' => 'davert'));
      * ```
      *
      * @param $model
@@ -263,7 +263,7 @@ class IntegrationTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $I->dontSeeRecord('users', array('name' => 'davert'));
+     * $I->dontSeeRecord('Users', array('name' => 'davert'));
      * ?>
      * ```
      *
@@ -282,7 +282,7 @@ class IntegrationTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $I->dontSeeRecord('users', array('name' => 'davert'));
+     * $I->dontSeeRecord('Users', array('name' => 'davert'));
      * ?>
      * ```
      *
@@ -302,7 +302,7 @@ class IntegrationTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $category = $I->grabRecord('users', array('name' => 'davert'));
+     * $category = $I->grabRecord('Users', array('name' => 'davert'));
      * ?>
      * ```
      *
@@ -595,8 +595,8 @@ class IntegrationTester extends \Codeception\Actor
      * <?php
      * // to match: /home/dashboard
      * $I->seeInCurrentUrl('home');
-     * // to match: /users/1
-     * $I->seeInCurrentUrl('/users/');
+     * // to match: /Users/1
+     * $I->seeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -616,8 +616,8 @@ class IntegrationTester extends \Codeception\Actor
      * <?php
      * // to match: /home/dashboard
      * $I->seeInCurrentUrl('home');
-     * // to match: /users/1
-     * $I->seeInCurrentUrl('/users/');
+     * // to match: /Users/1
+     * $I->seeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -636,7 +636,7 @@ class IntegrationTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $I->dontSeeInCurrentUrl('/users/');
+     * $I->dontSeeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -654,7 +654,7 @@ class IntegrationTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $I->dontSeeInCurrentUrl('/users/');
+     * $I->dontSeeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -756,7 +756,7 @@ class IntegrationTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->seeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->seeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
@@ -775,7 +775,7 @@ class IntegrationTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->seeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->seeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
@@ -795,7 +795,7 @@ class IntegrationTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->dontSeeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->dontSeeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
@@ -814,7 +814,7 @@ class IntegrationTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->dontSeeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->dontSeeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *

@@ -369,8 +369,8 @@ class AcceptanceTester extends \Codeception\Actor
      * <?php
      * // to match: /home/dashboard
      * $I->seeInCurrentUrl('home');
-     * // to match: /users/1
-     * $I->seeInCurrentUrl('/users/');
+     * // to match: /Users/1
+     * $I->seeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -390,8 +390,8 @@ class AcceptanceTester extends \Codeception\Actor
      * <?php
      * // to match: /home/dashboard
      * $I->seeInCurrentUrl('home');
-     * // to match: /users/1
-     * $I->seeInCurrentUrl('/users/');
+     * // to match: /Users/1
+     * $I->seeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -410,7 +410,7 @@ class AcceptanceTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $I->dontSeeInCurrentUrl('/users/');
+     * $I->dontSeeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -428,7 +428,7 @@ class AcceptanceTester extends \Codeception\Actor
      *
      * ``` php
      * <?php
-     * $I->dontSeeInCurrentUrl('/users/');
+     * $I->dontSeeInCurrentUrl('/Users/');
      * ?>
      * ```
      *
@@ -530,7 +530,7 @@ class AcceptanceTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->seeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->seeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
@@ -549,7 +549,7 @@ class AcceptanceTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->seeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->seeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
@@ -569,7 +569,7 @@ class AcceptanceTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->dontSeeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->dontSeeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
@@ -588,7 +588,7 @@ class AcceptanceTester extends \Codeception\Actor
      * ``` php
      * <?php
      * // to match root url
-     * $I->dontSeeCurrentUrlMatches('~$/users/(\d+)~');
+     * $I->dontSeeCurrentUrlMatches('~$/Users/(\d+)~');
      * ?>
      * ```
      *
