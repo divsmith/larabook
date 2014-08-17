@@ -123,7 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
-        'Divsmith\IlluminateDecouplr\IlluminateDecouplrServiceProvider',
+        'Divsmith\IlluminateAirlock\IlluminateAirlockServiceProvider',
         'Laracasts\Validation\ValidationServiceProvider',
         'Laracasts\Flash\FlashServiceProvider'
 	),
