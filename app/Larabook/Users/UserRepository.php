@@ -23,4 +23,18 @@ class UserRepository {
     {
         return User::orderBy('username', 'asc')->simplePaginate($howMany);
     }
+
+    /**
+     * Fetch a user by their username.
+     *
+     * @param $username
+     * @return mixed
+     */
+    public function findByUsername($username)
+    {
+        return User::with(['statuses' => function($query)
+        {
+            $query->latest();
+        }])->whereUsername($username)->first();
+    }
 } 

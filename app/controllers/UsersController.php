@@ -29,4 +29,11 @@ class UsersController extends \BaseController {
         return View::make('users.index')->withUsers($users);
 	}
 
+    public function show($username)
+    {
+        $user = $this->userRepository->findByUsername($username);
+
+        return View::make('users.show')->withUser($user);
+    }
+
 }

@@ -7,12 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Larabook</a>
+            <a class="navbar-brand" href="{{ route('home') }}">Larabook</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Link</a></li>
+                <li>{{ link_to_route('users_path', 'Browse Users') }}</li>
                 <li><a href="#">Link</a></li>
             </ul>
 
@@ -26,8 +26,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
+                            <li>{{ link_to_route('profile_path', 'Your Profile', $currentUser->username) }}</li>
                             <li><a href="#">Something else here</a></li>
                             <li class="divider"></li>
                             <li>{{ link_to_route('logout_path', 'Log Out') }}</li>
