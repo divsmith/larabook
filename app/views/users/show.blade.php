@@ -8,7 +8,9 @@
 
             @include('users.partials.avatar', ['size' => 75])
 
-            @include('users.partials.follow-form')
+            @unless( $user->is($currentUser))
+                @include('users.partials.follow-form')
+            @endif
         </div>
 
         <div class="col-md-6">
