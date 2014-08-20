@@ -3,14 +3,23 @@
 @section('content')
 
     <div class="row">
-        <div class="col-md-3">
-            <h1>{{ $user->username }}</h1>
+        <div class="col-md-4">
 
-            @include('users.partials.avatar', ['size' => 75])
+            <div class="media">
+                <div class="pull-left">
+                    @include('users.partials.avatar', ['size' => 50])
+                </div>
 
-            @unless( $user->is($currentUser))
-                @include('users.partials.follow-form')
-            @endif
+                <div class="media-body">
+                    <h1 class="media-heading">{{ $user->username }}</h1>
+
+                    @unless( $user->is($currentUser))
+                        @include('users.partials.follow-form')
+                    @endif
+                </div>
+            </div>
+
+
         </div>
 
         <div class="col-md-6">
