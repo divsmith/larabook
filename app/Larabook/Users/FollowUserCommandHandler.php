@@ -19,10 +19,6 @@ class FollowUserCommandHandler implements CommandHandler {
      */
     public function handle($command)
     {
-        $user = $this->userRepo->findById($command->userId);
-
-        $this->userRepo->follow($command->userIdToFollow, $user);
-
-        return $user;
+        return $this->userRepo->follow($command->userId, $command->userIdToFollow);
     }
 }
