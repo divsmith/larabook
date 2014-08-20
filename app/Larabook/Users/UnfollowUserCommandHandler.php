@@ -19,7 +19,7 @@ class UnfollowUserCommandHandler implements CommandHandler {
      */
     public function handle($command)
     {
-        $this->userRepo->unfollow($command->userId, $command->userIdToUnfollow);
+        return $this->userRepo->unfollow($command->userId, $command->userIdToUnfollow);
     }
 
 }
