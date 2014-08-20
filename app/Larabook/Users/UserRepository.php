@@ -61,6 +61,13 @@ class UserRepository {
         return User::find($userId)->follows()->attach($userIdToFollow);
     }
 
+    /**
+     * Unfollow a user.
+     *
+     * @param $userId
+     * @param $userIdToUnfollow
+     * @return mixed
+     */
     public function unfollow($userId, $userIdToUnfollow)
     {
         return User::find($userId)->follows()->detach($userIdToUnfollow);
