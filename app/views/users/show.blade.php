@@ -12,6 +12,7 @@
 
                 <div class="media-body">
                     <h1 class="media-heading">{{ $user->username }}</h1>
+                    <p class="text-muted">{{ $statusCount = $user->statuses->count() }} {{ str_plural('Status', $statusCount) }}</p>
 
                     @unless( $user->is($currentUser))
                         @include('users.partials.follow-form')
