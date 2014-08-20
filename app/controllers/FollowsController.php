@@ -26,9 +26,11 @@ class FollowsController extends \BaseController {
      * @param $userIdToUnfollow
      * @return mixed
      */
-    public function destroy($userIdToUnfollow)
+    public function delete($userIdToUnfollow)
 	{
-        $this->execute(UnfollowUserCommand::class);
+        $input = array_add(Input::get(), 'userId', Auth::id());
+
+        $this->execute(UnfollowUserCommand::class, $input);
 
         Flash::success('You have now unfollowed this user.');
 
