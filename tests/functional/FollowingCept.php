@@ -14,6 +14,5 @@ $I->seeCurrentUrlEquals('/@OtherUser');
 $I->click('Follow OtherUser');
 $I->seeCurrentUrlEquals('/@OtherUser');
 
-$I->see('You are following OtherUser');
-$I->dontSee('Follow OtherUser');
+$I->see('Unfollow OtherUser');
 
