@@ -13,7 +13,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>{{ link_to_route('users_path', 'Browse Users') }}</li>
-                <li><a href="#">Link</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
