@@ -12,7 +12,7 @@ use Laracasts\Presenter\PresentableTrait;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
-	use UserTrait, RemindableTrait, EventGenerator, PresentableTrait;
+	use UserTrait, RemindableTrait, EventGenerator, PresentableTrait, FollowableTrait;
 
     /**
      * Which fields may be mass assigned.
@@ -90,38 +90,4 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
         return $this->username == $user->username;
     }
-
-    /**
-     * Get the list of users that the current user follows.
-     *
-     * @return mixed
-     */
-    public function followedUsers()
-    {
-        return $this->belongsToMany('Larabook\Users\User', 'follows', 'follower_id', 'followed_id')->withTimestamps();
-    }
-
-    /**
-     * Get the list of users who follow the current user.
-     *
-     * @return mixed
-     */
-    public function followers()
-    {
-        return $this->belongsToMany('Larabook\Users\User', 'follows', 'followed_id', 'follower_id')->withTimestamps();
-    }
-
-    /**
-     * Determine if current user follows another user.
-     *
-     * @param User $otherUser
-     * @return bool
-     */
-    public function isFollowedBy(User $otherUser)
-    {
-        $idsWhoOtherUserFollows = $otherUser->followedUsers()->lists('followed_id');
-
-        return in_array($this->id, $idsWhoOtherUserFollows);
-    }
-
 }
