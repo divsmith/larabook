@@ -16,4 +16,17 @@ class UserPresenter extends Presenter {
 
         return "//www.gravatar.com/avatar/{$email}?s={$size}";
     }
+
+    /**
+     * Display the number of users following the current user.
+     *
+     * @return string
+     */
+    public function followerCount()
+    {
+        $count = $this->entity->followers()->count();
+        $plural = str_plural('Follower', $count);
+
+        return "{$count} {$plural}";
+    }
 } 

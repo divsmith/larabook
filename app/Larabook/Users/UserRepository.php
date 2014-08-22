@@ -58,7 +58,7 @@ class UserRepository {
      */
     public function follow($userId, $userIdToFollow)
     {
-        return User::find($userId)->follows()->attach($userIdToFollow);
+        return User::find($userId)->followedUsers()->attach($userIdToFollow);
     }
 
     /**
@@ -70,6 +70,6 @@ class UserRepository {
      */
     public function unfollow($userId, $userIdToUnfollow)
     {
-        return User::find($userId)->follows()->detach($userIdToUnfollow);
+        return User::find($userId)->followedUsers()->detach($userIdToUnfollow);
     }
 } 
