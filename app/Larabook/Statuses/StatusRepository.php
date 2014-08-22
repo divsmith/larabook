@@ -18,7 +18,7 @@ class StatusRepository {
     public function getFeedForUser($userId)
     {
         $user = User::find($userId);
-        $userIds = $user->follows()->lists('followed_id');
+        $userIds = $user->followedUsers()->lists('followed_id');
         $userIds[] = $user->id;
 
         return Status::whereIn('user_id', $userIds)->latest()->get();
