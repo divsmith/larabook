@@ -29,4 +29,12 @@ class UserPresenter extends Presenter {
 
         return "{$count} {$plural}";
     }
+
+    public function statusCount()
+    {
+        $count = $this->entity->statuses()->count();
+        $plural = str_plural('Status', $count);
+
+        return "{$count} {$plural}";
+    }
 } 
