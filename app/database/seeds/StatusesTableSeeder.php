@@ -15,7 +15,8 @@ class StatusesTableSeeder extends Seeder {
 		{
 			Status::create([
                 'user_id' => $faker->randomElement($userIds),
-                'body' => $faker->sentence()
+                'body' => $faker->sentence(),
+                'created_at' => $faker->dateTime()
 			]);
 		}
 	}
