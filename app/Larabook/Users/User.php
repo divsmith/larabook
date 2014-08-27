@@ -2,7 +2,7 @@
 
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
-use Larabook\Registration\Events\UserRegistered;
+use Larabook\Registration\Events\UserHasRegistered;
 use Laracasts\Commander\Events\EventGenerator;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
@@ -73,7 +73,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         $user = new static(compact('username', 'email', 'password')) ;
 
-        $user->raise(new UserRegistered($user));
+        $user->raise(new UserHasRegistered($user));
 
         return $user;
     }
