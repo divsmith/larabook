@@ -125,7 +125,8 @@ return array(
         'Laracasts\Commander\CommanderServiceProvider',
         'Divsmith\IlluminateAirlock\IlluminateAirlockServiceProvider',
         'Laracasts\Validation\ValidationServiceProvider',
-        'Laracasts\Flash\FlashServiceProvider'
+        'Laracasts\Flash\FlashServiceProvider',
+        'Larabook\Providers\EventServiceProvider'
 	),
 
 	/*
