@@ -2,7 +2,7 @@
 
 use Larabook\Users\User;
 
-class UserRegistered {
+class UserHasRegistered {
 
     public $user;
 
