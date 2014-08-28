@@ -9,6 +9,6 @@ class EventServiceProvider extends ServiceProvider{
      */
     public function register()
     {
-        $this->app['events']->listen('Larabook.*', 'Larabook\Handlers\EmailNotifier');
+        $this->app['events']->listen('Larabook.Registration.Events.UserHasRegistered', 'Larabook\Handlers\EmailNotifier');
     }
 }
