@@ -15,10 +15,10 @@ return array(
 
 	"password" => "Passwords must be at least six characters and match the confirmation.",
 
-	"user" => "We can't find a user with that e-mail address.",
+	"user" => "A password reset was sent to the given email, if valid.",
 
 	"token" => "This password reset token is invalid.",
 
-	"sent" => "Password reminder sent!",
+	"sent" => "A password reset was sent to the given email, if valid.",
 
 );

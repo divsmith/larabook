@@ -22,10 +22,6 @@ class RemindersController extends BaseController {
 		switch ($response = Password::remind(Input::only('email')))
 		{
 			case Password::INVALID_USER:
-                Flash::error(Lang::get($response));
-
-				return Redirect::back();
-
 			case Password::REMINDER_SENT:
                 Flash::message(Lang::get($response));
 
